@@ -8,5 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Level2_DotCircuit.unity
+    guid: f9eb12cbec37b427db24d3dc62c7a122
+  - enabled: 1
+    path: Assets/Scenes/Level3_NeonCourier.unity
+    guid: 59318352b788c4c2ea54487f86003b4a
+  - enabled: 1
+    path: Assets/Scenes/Level4_CyberMaze.unity
+    guid: 879239b008eb946daa85561ca9203a98
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

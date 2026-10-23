@@ -53,7 +53,19 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.6.4f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/TargetingPacks/netstandard2.1/analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/Puzzles/EchoSequencePuzzle.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerController.cs" />
+    <Compile Include="Assets/Scripts/Interaction/Interactable.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/MemorySequencePuzzle.cs" />
+    <Compile Include="Assets/Scripts/Interaction/MessageInteractable.cs" />
+    <Compile Include="Assets/Scripts/MainMenuBootstrap.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/NeonCourierMission.cs" />
     <Compile Include="Assets/TutorialInfo/Readme.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/DotCircuitPuzzle.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/CyberMazeMission.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/MemorySymbolButton.cs" />
+    <Compile Include="Assets/Scripts/Interaction/InteractionController.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/EchoToneMachine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TutorialInfo/StyleSheets/ReadmeEditor.uss" />

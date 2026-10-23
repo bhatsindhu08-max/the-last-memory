@@ -53,6 +53,16 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.6.4f1/Unity.app/Contents/Resources/Scripting/BCLExtensions/TargetingPacks/netstandard2.1/analyzers/dotnet/roslyn4.0/cs/System.Text.Json.SourceGeneration.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Editor/CreateLevelFourCyberMaze.cs" />
+    <Compile Include="Assets/Editor/CreateLevelTwoDotCircuit.cs" />
+    <Compile Include="Assets/Editor/RepairPlayerSetup.cs" />
+    <Compile Include="Assets/Editor/RebuildAuditoryLevelOne.cs" />
+    <Compile Include="Assets/Editor/RepairLevelOneFlow.cs" />
+    <Compile Include="Assets/Editor/ConnectLevelOneAreas.cs" />
+    <Compile Include="Assets/Editor/CreateEchoPuzzle.cs" />
+    <Compile Include="Assets/Editor/CreateLevelThreeNeonCourier.cs" />
+    <Compile Include="Assets/Editor/HalfHumanHalfRobotAvatarBuilder.cs" />
+    <Compile Include="Assets/Editor/AddMemoryToLevelOne.cs" />
     <Compile Include="Assets/TutorialInfo/Editor/ReadmeEditor.cs" />
   </ItemGroup>
   <ItemGroup>
