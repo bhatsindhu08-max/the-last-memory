@@ -61,6 +61,8 @@
     <Compile Include="Assets/Scripts/MainMenuBootstrap.cs" />
     <Compile Include="Assets/Scripts/Puzzles/NeonCourierMission.cs" />
     <Compile Include="Assets/TutorialInfo/Readme.cs" />
+    <Compile Include="Assets/Scripts/LevelOneRedCodeTheme.cs" />
+    <Compile Include="Assets/Scripts/Puzzles/FallingCodeRain.cs" />
     <Compile Include="Assets/Scripts/Puzzles/DotCircuitPuzzle.cs" />
     <Compile Include="Assets/Scripts/Puzzles/CyberMazeMission.cs" />
     <Compile Include="Assets/Scripts/Puzzles/MemorySymbolButton.cs" />

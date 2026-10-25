@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -68,8 +69,11 @@ namespace TheLastMemory
         private readonly bool[] safeLanes = new bool[BridgeRows];
         private bool crossingUnlocked;
         private bool falling;
+        private AudioSource glassBreakSource;
+        private AudioClip glassBreakClip;
+        private Material glassShardMaterial;
 
-        private string Rules => "HOW TO PLAY: Solve the riddle at each row. The safe LEFT or RIGHT pane turns cyan; cross only that pane. There are 8 rows. A wrong answer, unsafe pane, or expired timer breaks the glass and you fall. Press R to retry.";
+        private string Rules => "STORY: Remember the difference between human and machine as you cross the neon glass path. HOW TO PLAY: Solve each riddle, then cross only the glowing cyan pane. There are 8 rows. A wrong answer, unsafe pane, or expired timer breaks the glass and you fall. Press R to retry.";
 
         public void Configure(Transform targetPlayer, Transform[] orderedNodes, Transform[] wrongNodes, Text status, Text progress, Text timer)
         {
@@ -87,6 +91,7 @@ namespace TheLastMemory
             timeRemaining = timeLimit;
             maxMistakes = 1;
             BuildGlassBridge();
+            PrepareGlassBreakAudio();
             if (ambience == null)
             {
                 GameObject soundObject = GameObject.Find("Level2Ambience");
@@ -140,7 +145,7 @@ namespace TheLastMemory
                 checkpoint.transform.SetParent(root, false);
                 checkpoint.transform.position = new Vector3(0f, 0f, z - 1.55f);
                 circuitNodes[row] = checkpoint.transform;
-                safeLanes[row] = Random.Range(0, 2) == 0;
+                safeLanes[row] = UnityEngine.Random.Range(0, 2) == 0;
 
                 for (int lane = 0; lane < 2; lane++)
                 {
@@ -151,6 +156,109 @@ namespace TheLastMemory
                 }
             }
             SetNodeColor(circuitNodes[0], new Color(.1f, .95f, 1f));
+            BuildCyberpunkSideBuildings(root);
+        }
+
+        private void BuildCyberpunkSideBuildings(Transform root)
+        {
+            Material buildingMaterial = BridgeMaterial(new Color(.025f, .045f, .085f), new Color(.025f, .045f, .095f));
+            Material neonCyan = BridgeMaterial(new Color(.02f, .55f, .78f), new Color(.015f, .65f, 1f));
+            Material neonPink = BridgeMaterial(new Color(.58f, .025f, .25f), new Color(.95f, .015f, .22f));
+            Texture cityTexture = null;
+            GameObject backdrop = GameObject.Find("Cyber City Backdrop");
+            Renderer backdropRenderer = backdrop != null ? backdrop.GetComponent<Renderer>() : null;
+            if (backdropRenderer != null && backdropRenderer.sharedMaterial != null)
+            {
+                cityTexture = backdropRenderer.sharedMaterial.mainTexture;
+                if (cityTexture == null && backdropRenderer.sharedMaterial.HasProperty("_BaseMap"))
+                    cityTexture = backdropRenderer.sharedMaterial.GetTexture("_BaseMap");
+            }
+
+            float[] depths = { 1f, 8.5f, 16f, 24f, 32f, 40f };
+            float[] heights = { 15f, 20f, 13f, 22f, 17f, 14f };
+            for (int sideIndex = 0; sideIndex < 2; sideIndex++)
+            {
+                float side = sideIndex == 0 ? -1f : 1f;
+                for (int i = 0; i < depths.Length; i++)
+                {
+                    float depth = depths[i];
+                    float height = heights[i] + (i % 2 == 0 ? 0f : 2.5f);
+                    float width = 4.8f + (i % 3) * .7f;
+                    float centerX = side * (7.65f + (i % 2) * .35f);
+                    GameObject building = BridgeCube("Cyberpunk Tower " + (sideIndex == 0 ? "Left " : "Right ") + (i + 1), root,
+                        new Vector3(centerX, height * .5f - .18f, depth), new Vector3(width, height, 7.8f), buildingMaterial);
+                    Collider buildingCollider = building.GetComponent<Collider>();
+                    if (buildingCollider != null) Destroy(buildingCollider);
+
+                    // Bright, narrow facade accents frame the glass route without obstructing it.
+                    Material accent = (i + sideIndex) % 2 == 0 ? neonCyan : neonPink;
+                    float innerFace = centerX - side * (width * .5f + .025f);
+                    CreateBuildingAccent(root, "Tower Neon Spine", new Vector3(innerFace, height * .53f, depth), new Vector3(.08f, height * .72f, .13f), accent);
+                    CreateBuildingAccent(root, "Tower Sign Band", new Vector3(innerFace, height * .72f, depth - 1.1f), new Vector3(.08f, .24f, 2.7f), accent);
+
+                    if (cityTexture != null)
+                    {
+                        GameObject facade = GameObject.CreatePrimitive(PrimitiveType.Quad);
+                        facade.name = "Cyber City Tower Facade";
+                        facade.transform.SetParent(root, false);
+                        facade.transform.SetPositionAndRotation(new Vector3(innerFace - side * .035f, height * .5f - .2f, depth), Quaternion.Euler(0f, side < 0f ? 90f : -90f, 0f));
+                        facade.transform.localScale = new Vector3(7.2f, height - .7f, 1f);
+                        Collider facadeCollider = facade.GetComponent<Collider>();
+                        if (facadeCollider != null) Destroy(facadeCollider);
+                        Material facadeMaterial = new Material(Shader.Find("Universal Render Pipeline/Unlit"));
+                        if (facadeMaterial.HasProperty("_BaseMap")) facadeMaterial.SetTexture("_BaseMap", cityTexture);
+                        if (facadeMaterial.HasProperty("_MainTex")) facadeMaterial.SetTexture("_MainTex", cityTexture);
+                        facadeMaterial.mainTexture = cityTexture;
+                        facade.GetComponent<Renderer>().sharedMaterial = facadeMaterial;
+                    }
+                }
+            }
+        }
+
+        private static void CreateBuildingAccent(Transform root, string name, Vector3 position, Vector3 scale, Material material)
+        {
+            GameObject accent = BridgeCube(name, root, position, scale, material);
+            Collider collider = accent.GetComponent<Collider>();
+            if (collider != null) Destroy(collider);
+        }
+
+        private void PrepareGlassBreakAudio()
+        {
+            glassBreakSource = GetComponent<AudioSource>();
+            if (glassBreakSource == null) glassBreakSource = gameObject.AddComponent<AudioSource>();
+            glassBreakSource.playOnAwake = false;
+            glassBreakSource.loop = false;
+            glassBreakSource.spatialBlend = 0f;
+            glassBreakSource.volume = 1f;
+            glassBreakClip = CreateGlassBreakClip();
+            glassBreakSource.clip = null;
+            glassShardMaterial = BridgeMaterial(new Color(.2f, .88f, 1f, .78f), new Color(.05f, .7f, 1f));
+        }
+
+        private static AudioClip CreateGlassBreakClip()
+        {
+            const int sampleRate = 44100;
+            const float duration = .82f;
+            int sampleCount = Mathf.CeilToInt(sampleRate * duration);
+            float[] samples = new float[sampleCount];
+            System.Random random = new System.Random(1907);
+            double[] frequencies = { 1120.0, 1680.0, 2430.0, 3310.0, 4180.0 };
+            double[] phases = { .4, 1.7, 2.3, .9, 2.8 };
+            for (int i = 0; i < sampleCount; i++)
+            {
+                double t = (double)i / sampleRate;
+                float crackEnvelope = (float)Math.Exp(-t * 18.0);
+                float ringEnvelope = (float)Math.Exp(-t * 5.2);
+                double ring = 0.0;
+                for (int partial = 0; partial < frequencies.Length; partial++)
+                    ring += Math.Sin(2.0 * Math.PI * frequencies[partial] * t + phases[partial]) * (1.0 / (partial + 1));
+                float crackle = ((float)random.NextDouble() * 2f - 1f) * crackEnvelope;
+                float snap = i < sampleRate / 80 ? ((float)random.NextDouble() * 2f - 1f) * 1.15f * (1f - (float)i / (sampleRate / 80f)) : 0f;
+                samples[i] = Mathf.Clamp((float)ring * .14f * ringEnvelope + crackle * .28f + snap * .42f, -1f, 1f);
+            }
+            AudioClip clip = AudioClip.Create("Procedural Glass Shatter", sampleCount, 1, sampleRate, false);
+            clip.SetData(samples, 0);
+            return clip;
         }
 
         private static GameObject BridgeCube(string name, Transform parent, Vector3 position, Vector3 scale, Material material)
@@ -345,6 +453,36 @@ namespace TheLastMemory
             SetPaneColor(pane, new Color(1f, .015f, .02f));
             Collider paneCollider = pane.GetComponent<Collider>();
             if (paneCollider != null) paneCollider.enabled = false;
+            SpawnGlassShards(pane);
+            Renderer paneRenderer = pane.GetComponent<Renderer>();
+            if (paneRenderer != null) paneRenderer.enabled = false;
+        }
+
+        private void SpawnGlassShards(Transform pane)
+        {
+            if (pane == null || glassShardMaterial == null) return;
+            Vector3 center = pane.position;
+            Vector3 size = pane.lossyScale;
+            const int columns = 4;
+            const int rows = 3;
+            for (int x = 0; x < columns; x++)
+            for (int z = 0; z < rows; z++)
+            {
+                GameObject shard = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                shard.name = "Falling Glass Shard";
+                shard.transform.position = center + new Vector3(((x + .5f) / columns - .5f) * size.x, .03f, ((z + .5f) / rows - .5f) * size.z);
+                shard.transform.rotation = Quaternion.Euler(UnityEngine.Random.Range(-32f, 32f), UnityEngine.Random.Range(0f, 360f), UnityEngine.Random.Range(-32f, 32f));
+                shard.transform.localScale = new Vector3(size.x / columns * UnityEngine.Random.Range(.72f, .94f), .045f, size.z / rows * UnityEngine.Random.Range(.72f, .94f));
+                shard.GetComponent<Renderer>().sharedMaterial = glassShardMaterial;
+                Rigidbody body = shard.AddComponent<Rigidbody>();
+                body.mass = .08f;
+                body.linearDamping = .12f;
+                body.angularDamping = .08f;
+                Vector3 direction = new Vector3(shard.transform.position.x - center.x, .4f, shard.transform.position.z - center.z).normalized;
+                body.AddForce(direction * UnityEngine.Random.Range(1.4f, 3.6f) + Vector3.up * UnityEngine.Random.Range(.7f, 1.8f), ForceMode.Impulse);
+                body.AddTorque(UnityEngine.Random.insideUnitSphere * UnityEngine.Random.Range(.3f, 1.2f), ForceMode.Impulse);
+                Destroy(shard, 3.2f);
+            }
         }
 
         private void BreakBridgeRow(int row)
@@ -523,12 +661,19 @@ namespace TheLastMemory
         {
             if (failed) return;
             failed = true;
+            PlayGlassBreak();
             if ((reason == "TIME EXPIRED" || reason.StartsWith("WRONG ANSWER")) && nextNode < BridgeRows)
                 BreakBridgeRow(nextNode);
             status = "GAME OVER — " + reason + ". Press R to retry.";
             SetAnswerButtonsVisible(false);
             SetPlayerMovementEnabled(false);
             if (!falling) StartCoroutine(FallSequence(reason));
+        }
+
+        private void PlayGlassBreak()
+        {
+            if (glassBreakSource != null && glassBreakClip != null)
+                glassBreakSource.PlayOneShot(glassBreakClip, .9f);
         }
 
         private System.Collections.IEnumerator FallSequence(string reason)
@@ -560,11 +705,14 @@ namespace TheLastMemory
             }
             for (int row = 0; row < BridgeRows; row++)
             {
-                safeLanes[row] = Random.Range(0, 2) == 0;
+                safeLanes[row] = UnityEngine.Random.Range(0, 2) == 0;
                 for (int lane = 0; lane < 2; lane++)
                 {
                     Transform pane = bridgePanes[row, lane];
                     if (pane == null) continue;
+                    pane.gameObject.SetActive(true);
+                    Renderer paneRenderer = pane.GetComponent<Renderer>();
+                    if (paneRenderer != null) paneRenderer.enabled = true;
                     Collider paneCollider = pane.GetComponent<Collider>();
                     if (paneCollider != null) paneCollider.enabled = true;
                     SetPaneColor(pane, new Color(.15f, .32f, .42f));
@@ -602,7 +750,7 @@ namespace TheLastMemory
             {
                 header.rectTransform.anchorMin = header.rectTransform.anchorMax = new Vector2(0f, 1f);
                 header.rectTransform.pivot = new Vector2(0f, 1f);
-                header.text = "LEVEL 2 — NEON GLASS PATH";
+                header.text = "LEVEL 2 — HUMAN & MACHINE";
                 header.rectTransform.anchoredPosition = new Vector2(26f, -18f);
                 header.rectTransform.sizeDelta = new Vector2(868f, 42f);
                 header.fontSize = 27;

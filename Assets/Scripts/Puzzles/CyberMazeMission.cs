@@ -25,6 +25,8 @@ namespace TheLastMemory
         private readonly Queue<GameObject> returnFlags = new Queue<GameObject>();
         private Material breadcrumbMaterial;
         private Material flagMaterial;
+        private Material alleyThemeMaterial;
+        private readonly List<Material> floorEmissionMaterials = new List<Material>();
         private Vector3 lastBreadcrumbPosition;
         private float nextHintUpdate;
         private const float BreadcrumbSpacing = 2.5f;
@@ -44,19 +46,314 @@ namespace TheLastMemory
         private void Start()
         {
             ResolveReferences();
+            SealMazeRoute();
+            BuildNeonAlleyTheme();
+            ApplyCyberpunkEmissionFloor();
             if (ambience != null && ambience.clip != null)
             {
                 ambience.loop = true;
                 if (!ambience.isPlaying) ambience.Play();
             }
             if (statusLabel != null)
-                statusLabel.text = "Find the bright HOME beacon at the end of the city maze. Follow the streets through the buildings; no riddles or laser traps remain.";
+                statusLabel.text = "LEVEL 4 — LET'S GO BACK HOME. Find the bright HOME beacon at the end of the city maze. Follow the streets through the buildings.";
             if (player != null)
             {
                 lastBreadcrumbPosition = player.position;
                 DropBreadcrumb(lastBreadcrumbPosition);
             }
             if (progressLabel != null) progressLabel.text = "CYAN TRAIL: YOUR ROUTE  •  F: PLANT A RETURN FLAG";
+        }
+
+        private void SealMazeRoute()
+        {
+            GameObject worldObject = GameObject.Find("Level4_CyberCityMaze");
+            if (worldObject == null) return;
+            Transform maze = worldObject.transform;
+            RebuildSingleSolutionMaze(maze);
+            Material cityWallMaterial = null;
+
+            Renderer[] renderers = maze.GetComponentsInChildren<Renderer>(true);
+            foreach (Renderer renderer in renderers)
+            {
+                if (renderer == null || !renderer.gameObject.name.StartsWith("Maze Building")) continue;
+                if (cityWallMaterial == null) cityWallMaterial = renderer.sharedMaterial;
+
+                // Slightly overlapping, unrotated blocks close the collision cracks between buildings.
+                Transform wall = renderer.transform;
+                wall.rotation = Quaternion.identity;
+                Vector3 scale = wall.localScale;
+                scale.x = Mathf.Max(scale.x, 4.12f);
+                scale.z = Mathf.Max(scale.z, 4.12f);
+                wall.localScale = scale;
+            }
+
+            Transform homePlaza = maze.Find("Home plaza");
+            if (homePlaza != null)
+            {
+                Vector3 size = homePlaza.localScale;
+                size.z = Mathf.Max(size.z, 16f);
+                homePlaza.localScale = size;
+            }
+
+            // Close the back of the start and contain the supported HOME plaza.
+            CreateMazeSeal(maze, "Maze Start Backstop", new Vector3(0f, 4f, -39.75f), new Vector3(4.3f, 8f, .5f), cityWallMaterial);
+            CreateMazeSeal(maze, "Home District End Wall", new Vector3(0f, 4f, 51.8f), new Vector3(13f, 8f, .5f), cityWallMaterial);
+            CreateMazeSeal(maze, "Home District Left Wall", new Vector3(-6.05f, 4f, 45f), new Vector3(.5f, 8f, 14f), cityWallMaterial);
+            CreateMazeSeal(maze, "Home District Right Wall", new Vector3(6.05f, 4f, 45f), new Vector3(.5f, 8f, 14f), cityWallMaterial);
+        }
+
+        private static void RebuildSingleSolutionMaze(Transform maze)
+        {
+            const int size = 19;
+            const int center = size / 2;
+            bool[,] open = new bool[size, size];
+            const int logicalSize = (size - 1) / 2;
+            bool[,] visited = new bool[logicalSize, logicalSize];
+            Stack<Vector2Int> search = new Stack<Vector2Int>();
+            System.Random random = new System.Random(41024);
+
+            Vector2Int start = new Vector2Int(center / 2, logicalSize - 1);
+            visited[start.y, start.x] = true;
+            open[size - 2, center] = true;
+            open[1 + start.y * 2, 1 + start.x * 2] = true;
+            search.Push(start);
+
+            // A deterministic depth-first carve creates a dense, diagram-style perfect maze.
+            // Every corridor cell belongs to one connected tree, so there are no shortcut loops.
+            while (search.Count > 0)
+            {
+                Vector2Int current = search.Peek();
+                int[] order = { 0, 1, 2, 3 };
+                for (int i = order.Length - 1; i > 0; i--)
+                {
+                    int swap = random.Next(i + 1);
+                    int value = order[i];
+                    order[i] = order[swap];
+                    order[swap] = value;
+                }
+
+                bool advanced = false;
+                for (int i = 0; i < order.Length; i++)
+                {
+                    Vector2Int direction = order[i] == 0 ? Vector2Int.up :
+                        order[i] == 1 ? Vector2Int.right :
+                        order[i] == 2 ? Vector2Int.down : Vector2Int.left;
+                    Vector2Int next = current + direction;
+                    if (next.x < 0 || next.x >= logicalSize || next.y < 0 || next.y >= logicalSize || visited[next.y, next.x])
+                        continue;
+
+                    int row = 1 + current.y * 2;
+                    int col = 1 + current.x * 2;
+                    int nextRow = 1 + next.y * 2;
+                    int nextCol = 1 + next.x * 2;
+                    open[row, col] = true;
+                    open[nextRow, nextCol] = true;
+                    open[(row + nextRow) / 2, (col + nextCol) / 2] = true;
+                    visited[next.y, next.x] = true;
+                    search.Push(next);
+                    advanced = true;
+                    break;
+                }
+
+                if (!advanced) search.Pop();
+            }
+
+            // The two openings are deliberate: the player's start and the single HOME exit.
+            open[size - 1, center] = true;
+            open[0, center] = true;
+            open[1, center] = true;
+
+            Material floorMaterial = null;
+            Material wallMaterial = null;
+            Transform foundation = maze.Find("Continuous city road foundation");
+            Renderer foundationRenderer = foundation != null ? foundation.GetComponent<Renderer>() : null;
+            if (foundationRenderer != null) floorMaterial = foundationRenderer.sharedMaterial;
+            for (int i = 0; i < maze.childCount && wallMaterial == null; i++)
+            {
+                Transform child = maze.GetChild(i);
+                if (!child.name.StartsWith("Maze Building")) continue;
+                Renderer renderer = child.GetComponent<Renderer>();
+                if (renderer != null) wallMaterial = renderer.sharedMaterial;
+            }
+
+            // Remove decor attached to the old generated layout so no lamps or signs float over the new paths.
+            for (int i = 0; i < maze.childCount; i++)
+            {
+                Transform child = maze.GetChild(i);
+                if (child.name.StartsWith("Neon shopfront") || child.name == "Faint lane marker" ||
+                    child.name == "Neon lamp post" || child.name == "Neon lamp arm" || child.name == "Neon lamp" ||
+                    child.name == "Rooftop antenna")
+                    child.gameObject.SetActive(false);
+            }
+
+            for (int row = 0; row < size; row++)
+            {
+                for (int col = 0; col < size; col++)
+                {
+                    string oldName = open[row, col] ? "Street Tile " + row + " " + col : "Maze Building " + row + " " + col;
+                    string otherName = open[row, col] ? "Maze Building " + row + " " + col : "Street Tile " + row + " " + col;
+                    Transform cell = maze.Find(oldName);
+                    if (cell == null) cell = maze.Find(otherName);
+                    if (cell == null)
+                    {
+                        GameObject created = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                        created.transform.SetParent(maze, false);
+                        cell = created.transform;
+                    }
+
+                    cell.name = open[row, col] ? "Street Tile " + row + " " + col : "Maze Building " + row + " " + col;
+                    cell.gameObject.SetActive(true);
+                    float x = (col - center) * 4f;
+                    float z = (center - row) * 4f;
+                    Renderer cellRenderer = cell.GetComponent<Renderer>();
+                    BoxCollider box = cell.GetComponent<BoxCollider>();
+                    if (open[row, col])
+                    {
+                        cell.localPosition = new Vector3(x, .035f, z);
+                        cell.localRotation = Quaternion.identity;
+                        cell.localScale = new Vector3(4f, .07f, 4f);
+                        if (cellRenderer != null && floorMaterial != null) cellRenderer.sharedMaterial = floorMaterial;
+                        if (box != null) box.enabled = true;
+                    }
+                    else
+                    {
+                        bool boundary = row == 0 || col == 0 || row == size - 1 || col == size - 1;
+                        float height = boundary ? 14f : 8f;
+                        cell.localPosition = new Vector3(x, height * .5f, z);
+                        cell.localRotation = Quaternion.identity;
+                        cell.localScale = new Vector3(4.12f, height, 4.12f);
+                        if (cellRenderer != null && wallMaterial != null) cellRenderer.sharedMaterial = wallMaterial;
+                        if (box == null) box = cell.gameObject.AddComponent<BoxCollider>();
+                        box.enabled = true;
+                        box.size = Vector3.one;
+                    }
+                }
+            }
+        }
+
+        private static void CreateMazeSeal(Transform parent, string objectName, Vector3 position, Vector3 size, Material material)
+        {
+            if (parent.Find(objectName) != null) return;
+            GameObject seal = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            seal.name = objectName;
+            seal.transform.SetParent(parent, false);
+            seal.transform.position = position;
+            seal.transform.localScale = size;
+            Renderer renderer = seal.GetComponent<Renderer>();
+            if (renderer != null && material != null) renderer.sharedMaterial = material;
+        }
+
+        private void BuildNeonAlleyTheme()
+        {
+            Texture2D alleyImage = Resources.Load<Texture2D>("Level4Theme/NeonAlley");
+            if (alleyImage == null)
+            {
+                Debug.LogWarning("Level 4 alley theme image was not found at Resources/Level4Theme/NeonAlley.", this);
+                return;
+            }
+
+            GameObject worldObject = GameObject.Find("Level4_CyberCityMaze");
+            if (worldObject == null) return;
+            Shader shader = Shader.Find("Universal Render Pipeline/Unlit");
+            if (shader == null) shader = Shader.Find("Unlit/Texture");
+            if (shader == null) return;
+
+            alleyThemeMaterial = new Material(shader) { name = "Level 4 Neon Alley Theme" };
+            alleyThemeMaterial.mainTexture = alleyImage;
+            if (alleyThemeMaterial.HasProperty("_BaseMap")) alleyThemeMaterial.SetTexture("_BaseMap", alleyImage);
+            if (alleyThemeMaterial.HasProperty("_MainTex")) alleyThemeMaterial.SetTexture("_MainTex", alleyImage);
+
+            // Portrait art billboards sit beyond the maze boundary as a distant neon-city skyline.
+            float[] positions = { -36f, -12f, 12f, 36f };
+            for (int i = 0; i < positions.Length; i++)
+            {
+                CreateThemeBillboard(worldObject.transform, new Vector3(-63f, 15f, positions[i]), Quaternion.Euler(0f, 90f, 0f));
+                CreateThemeBillboard(worldObject.transform, new Vector3(63f, 15f, positions[i]), Quaternion.Euler(0f, -90f, 0f));
+                CreateThemeBillboard(worldObject.transform, new Vector3(positions[i], 15f, -60f), Quaternion.identity);
+                CreateThemeBillboard(worldObject.transform, new Vector3(positions[i], 15f, 60f), Quaternion.Euler(0f, 180f, 0f));
+            }
+        }
+
+
+        private void ApplyCyberpunkEmissionFloor()
+        {
+            Texture2D emissionPattern = Resources.Load<Texture2D>("Level4Theme/CyberpunkEmission");
+            GameObject worldObject = GameObject.Find("Level4_CyberCityMaze");
+            if (emissionPattern == null || worldObject == null)
+            {
+                if (emissionPattern == null)
+                    Debug.LogWarning("Level 4 floor emission image was not found at Resources/Level4Theme/CyberpunkEmission.", this);
+                return;
+            }
+
+            Renderer foundation = FindRenderer(worldObject.transform, "Continuous city road foundation");
+            if (foundation != null)
+                foundation.sharedMaterial = CreateFloorEmissionMaterial(foundation.sharedMaterial, emissionPattern, new Vector2(18f, 18f), 1.25f, "L4 Road Foundation Emission");
+
+            Material streetTileMaterial = null;
+            Material homeFloorMaterial = null;
+            Material wallEmissionMaterial = null;
+            Renderer[] renderers = worldObject.GetComponentsInChildren<Renderer>(true);
+            foreach (Renderer floorRenderer in renderers)
+            {
+                if (floorRenderer == null || floorRenderer.gameObject == foundation?.gameObject) continue;
+                string objectName = floorRenderer.gameObject.name;
+                if (objectName.StartsWith("Street Tile"))
+                {
+                    if (streetTileMaterial == null)
+                        streetTileMaterial = CreateFloorEmissionMaterial(floorRenderer.sharedMaterial, emissionPattern, Vector2.one, 1.25f, "L4 Street Tile Emission");
+                    floorRenderer.sharedMaterial = streetTileMaterial;
+                }
+                else if (objectName == "Home plaza")
+                {
+                    if (homeFloorMaterial == null)
+                        homeFloorMaterial = CreateFloorEmissionMaterial(floorRenderer.sharedMaterial, emissionPattern, Vector2.one, 1.25f, "L4 Home Plaza Emission");
+                    floorRenderer.sharedMaterial = homeFloorMaterial;
+                }
+                else if (objectName.StartsWith("Maze Building") || objectName == "Maze Start Backstop" ||
+                         objectName.StartsWith("Home District"))
+                {
+                    if (wallEmissionMaterial == null)
+                        wallEmissionMaterial = CreateFloorEmissionMaterial(floorRenderer.sharedMaterial, emissionPattern, Vector2.one, .55f, "L4 Neon Circuit Building Emission");
+                    if (wallEmissionMaterial != null) floorRenderer.sharedMaterial = wallEmissionMaterial;
+                }
+            }
+        }
+
+        private Material CreateFloorEmissionMaterial(Material source, Texture2D emissionPattern, Vector2 tiling, float emissionStrength, string materialName)
+        {
+            if (source == null) return null;
+            Material material = new Material(source) { name = materialName };
+            if (material.HasProperty("_EmissionMap"))
+            {
+                material.SetTexture("_EmissionMap", emissionPattern);
+                material.SetTextureScale("_EmissionMap", tiling);
+            }
+            if (material.HasProperty("_EmissionColor"))
+            {
+                material.EnableKeyword("_EMISSION");
+                material.SetColor("_EmissionColor", Color.white * emissionStrength);
+            }
+            floorEmissionMaterials.Add(material);
+            return material;
+        }
+
+        private static Renderer FindRenderer(Transform root, string objectName)
+        {
+            Transform target = root.Find(objectName);
+            return target != null ? target.GetComponent<Renderer>() : null;
+        }
+
+        private void CreateThemeBillboard(Transform parent, Vector3 position, Quaternion rotation)
+        {
+            GameObject billboard = GameObject.CreatePrimitive(PrimitiveType.Quad);
+            billboard.name = "Neon Alley Theme Billboard";
+            billboard.transform.SetParent(parent, false);
+            billboard.transform.SetPositionAndRotation(position, rotation);
+            billboard.transform.localScale = new Vector3(10f, 28f, 1f);
+            Collider collider = billboard.GetComponent<Collider>();
+            if (collider != null) Destroy(collider);
+            billboard.GetComponent<Renderer>().sharedMaterial = alleyThemeMaterial;
         }
 
         private void Update()
@@ -114,6 +411,14 @@ namespace TheLastMemory
             }
         }
 
+
+        private void OnDestroy()
+        {
+            if (alleyThemeMaterial != null) Destroy(alleyThemeMaterial);
+            foreach (Material material in floorEmissionMaterials)
+                if (material != null) Destroy(material);
+            floorEmissionMaterials.Clear();
+        }
 
         private void UpdateHomeHint()
         {
@@ -198,7 +503,8 @@ namespace TheLastMemory
 
             if (playerVisual != null)
             {
-                Transform machine = playerVisual.Find("Cybernetic Avatar");
+                Transform machine = playerVisual.Find("Neon Hologram Avatar");
+                if (machine == null) machine = playerVisual.Find("Cybernetic Avatar");
                 if (machine != null) machine.gameObject.SetActive(false);
                 Renderer oldMesh = playerVisual.GetComponent<Renderer>();
                 if (oldMesh != null) oldMesh.enabled = false;

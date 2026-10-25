@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,7 +17,7 @@ namespace TheLastMemory
         [SerializeField] private Text statusLabel;
         [SerializeField] private Text progressLabel;
         [SerializeField] private Text timerLabel;
-        [SerializeField, Min(30f)] private float timeLimit = 90f;
+        [SerializeField, Min(30f)] private float timeLimit = 120f;
         [SerializeField, Min(1)] private int cachesRequired = 5;
         [SerializeField, Min(1)] private int maxAlerts = 3;
         [SerializeField, Min(0.5f)] private float pickupRadius = 6.5f;
@@ -46,21 +47,22 @@ namespace TheLastMemory
         private int alerts;
         private bool failed;
         private bool complete;
-        private string status = "Search the alley for energy cores.";
+        private string status = "LEVEL 3 — COLLECT YOUR MEMORIES BEFORE THE LASERS CATCH YOU!";
 
-        private static readonly float[] RowZ = { 25f, 31f, 37f };
+        // Five shifting laser barriers extend the hazard through more of the alley.
+        private static readonly float[] RowZ = { 25f, 31f, 37f, 43f, 49f };
         private static readonly float[,] GapPatterns =
         {
-            { -4.3f, 0f, 4.3f },
-            { 4.3f, 0f, -4.3f },
-            { 0f, 4.3f, 0f },
-            { -4.3f, 4.3f, -4.3f }
+            { -4.3f, 0f, 4.3f, 0f, -4.3f },
+            { 4.3f, 0f, -4.3f, 4.3f, 0f },
+            { 0f, 4.3f, 0f, -4.3f, 4.3f },
+            { -4.3f, 4.3f, -4.3f, 0f, 4.3f }
         };
         private const float GapHalfWidth = 1.35f;
         private const float ArenaHalfWidth = 8f;
-        private const float PatternDuration = 7.5f;
-        private const float MinimumPatternDuration = 4.75f;
-        private const float WarningDuration = 1.5f;
+        private const float PatternDuration = 5.8f;
+        private const float MinimumPatternDuration = 3.25f;
+        private const float WarningDuration = 1f;
         private const float HomeRadius = 2.6f;
         private const int PickupCount = 5;
 
@@ -155,7 +157,7 @@ namespace TheLastMemory
                         renderer.enabled = true;
                         renderer.sharedMaterial = GetPickupMaterial();
                     }
-                    item.name = "Energy Core " + (i + 1);
+                    item.name = "Memory " + (i + 1);
                     pickups.Add(item);
                     CreateCoreLabel(item, i + 1);
                 }
@@ -186,7 +188,7 @@ namespace TheLastMemory
             ring.transform.localScale = new Vector3(5.2f, 0.05f, 5.2f);
             DisableCollider(ring);
             ring.GetComponent<Renderer>().sharedMaterial = GetHomeMaterial();
-            CreateWorldLabel("START / RETURN CORES", home.position + Vector3.up * 0.3f, new Color32(70, 245, 255, 255));
+            CreateWorldLabel("START / RETURN MEMORIES", home.position + Vector3.up * 0.3f, new Color32(70, 245, 255, 255));
         }
 
         private void BuildLaserGrid()
@@ -264,14 +266,15 @@ namespace TheLastMemory
                 }
                 carriedItems.Clear();
                 score += deliveredNow * 100;
-                status = deliveredNow + " CORE" + (deliveredNow == 1 ? "" : "S") + " DELIVERED +" + (deliveredNow * 100) + ". Find the rest.";
+                status = deliveredNow + " MEMOR" + (deliveredNow == 1 ? "Y" : "IES") + " RETURNED +" + (deliveredNow * 100) + ". Find the rest.";
+                if (collected.Count >= PickupCount && score < PickupCount * 100)
+                    status = "ALL MEMORIES FOUND — return every carried memory to START to open Level 4.";
                 if (collected.Count >= PickupCount && score >= PickupCount * 100)
                 {
                     complete = true;
-                    status = string.IsNullOrEmpty(nextSceneName)
-                        ? "ARENA CLEARED — all cores delivered! Press R to play again."
-                        : "ARENA CLEARED — all cores delivered! The final signal is opening...";
-                    if (!string.IsNullOrEmpty(nextSceneName)) Invoke(nameof(LoadNextScene), 3.5f);
+                    status = "ARENA CLEARED — all memories returned! The final signal to Level 4 is opening...";
+                    ShowEndOverlay("LEVEL 3 COMPLETE", "All five memories are back at START. Loading Level 4...", false);
+                    StartCoroutine(LoadNextSceneAfterDelay());
                 }
             }
 
@@ -296,7 +299,7 @@ namespace TheLastMemory
             if (nearestItem == null) return;
             if (nearestDistance <= pickupPromptRadius)
             {
-                status = "CORE " + (nearestIndex + 1) + " NEARBY — press E or move closer to collect it.";
+                status = "MEMORY " + (nearestIndex + 1) + " NEARBY — press E or move closer to collect it.";
                 if (nearestDistance <= pickupRadius || interactPressed)
                 {
                     collected.Add(nearestIndex);
@@ -308,7 +311,9 @@ namespace TheLastMemory
                     nearestItem.localScale = Vector3.one * 0.32f;
                     SetCoreLabelVisible(nearestItem, false);
                     nearestItem.gameObject.SetActive(true);
-                    status = "CORE " + (nearestIndex + 1) + " COLLECTED — " + carriedItems.Count + " carried. Keep searching or return to START to bank them.";
+                    status = collected.Count >= PickupCount
+                        ? "ALL 5 MEMORIES FOUND — return them to START to open Level 4."
+                        : "MEMORY " + (nearestIndex + 1) + " COLLECTED — " + carriedItems.Count + " carried. Keep searching or return to START to bank them.";
                 }
             }
         }
@@ -316,7 +321,7 @@ namespace TheLastMemory
         private void CheckLaserContact()
         {
             float patternDuration = CurrentPatternDuration();
-            if (hitCooldown > 0f || patternClock >= patternDuration - WarningDuration) return;
+            if (hitCooldown > 0f) return;
             float gapMargin = GapHalfWidth + 0.58f;
             for (int row = 0; row < RowZ.Length; row++)
             {
@@ -384,7 +389,7 @@ namespace TheLastMemory
             Text header = panel != null ? panel.GetComponentInChildren<Text>() : null;
             if (header != null && header != statusLabel)
             {
-                header.text = "LEVEL 3 — NEON LASER RUN";
+                header.text = "LEVEL 3 — COLLECT YOUR MEMORIES";
                 header.rectTransform.anchoredPosition = new Vector2(18f, -12f);
                 header.rectTransform.sizeDelta = new Vector2(660f, 30f);
                 header.fontSize = 21;
@@ -414,20 +419,31 @@ namespace TheLastMemory
             ShowEndOverlay("GAME OVER", reason);
         }
 
-        private void LoadNextScene()
+        private IEnumerator LoadNextSceneAfterDelay()
         {
-            if (!string.IsNullOrEmpty(nextSceneName) && Application.CanStreamedLevelBeLoaded(nextSceneName))
-                SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
+            yield return new WaitForSecondsRealtime(3.5f);
+
+            string targetScene = string.IsNullOrWhiteSpace(nextSceneName) ? "Level4_CyberMaze" : nextSceneName;
+            int sceneBuildIndex = SceneUtility.GetBuildIndexByScenePath("Assets/Scenes/" + targetScene + ".unity");
+            if (sceneBuildIndex >= 0)
+                SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+            else if (Application.CanStreamedLevelBeLoaded(targetScene))
+                SceneManager.LoadScene(targetScene, LoadSceneMode.Single);
             else
-                Debug.LogError("The next scene '" + nextSceneName + "' is not included in Build Settings.", this);
+            {
+                const string message = "Level 4 could not be loaded. Check that Level4_CyberMaze is enabled in Build Settings.";
+                Debug.LogError(message, this);
+                if (endOverlayText != null)
+                    endOverlayText.text = "LEVEL 3 COMPLETE\n" + message + "\n\nPress R to replay Level 3";
+            }
         }
 
         private void RefreshHud()
         {
             if (statusLabel != null)
-                statusLabel.text = "HOW TO PLAY: WASD + mouse. Walk within 6.5 units of a glowing core to auto-collect it, or press E when its prompt appears. You can carry several cores; return to the cyan START pad to bank them for 100 points each. Follow the gaps in the red lasers; orange warns that gaps are shifting and the patterns speed up as you bank cores. Touching a red laser ends the run; time up also ends it. R retries.\n\n" + status;
+                statusLabel.text = "LEVEL 3 — COLLECT YOUR MEMORIES BEFORE THE LASERS CATCH YOU!\nHOW TO PLAY: Move with WASD + mouse. Collect MEMORY 1–5 by walking close or pressing E, then return to START to bank them for points. Cross each laser row through its gap. Orange means the gaps shift soon. Touch a laser or run out of time and the game ends. Press R to retry.\n\n" + status;
             if (progressLabel != null)
-                progressLabel.text = "CORES " + Mathf.Min(collected.Count, PickupCount) + "/" + PickupCount + "   |   DELIVERED " + (score / 100) + "   |   SCORE " + score + "   |   STRIKES " + alerts + "/" + maxAlerts;
+                progressLabel.text = "MEMORIES " + Mathf.Min(collected.Count, PickupCount) + "/" + PickupCount + "   |   RETURNED " + (score / 100) + "   |   SCORE " + score + "   |   STRIKES " + alerts + "/" + maxAlerts;
             if (timerLabel != null)
                 timerLabel.text = "TIME " + Mathf.CeilToInt(timeRemaining) + "s" + (complete ? " · CLEAR" : failed ? " · OVER" : "");
         }
@@ -464,13 +480,13 @@ namespace TheLastMemory
             patternIndex = Random.Range(0, GapPatterns.GetLength(0));
             failed = false;
             complete = false;
-            status = "Search the alley for energy cores.";
+            status = "LEVEL 3 — COLLECT YOUR MEMORIES BEFORE THE LASERS CATCH YOU!";
             alerts = 0;
             ApplyLaserPattern();
             RefreshHud();
         }
 
-        private void ShowEndOverlay(string title, string reason)
+        private void ShowEndOverlay(string title, string reason, bool showRetry = true)
         {
             if (endOverlay == null)
             {
@@ -497,7 +513,7 @@ namespace TheLastMemory
                 card.GetComponent<Image>().color = new Color(.035f, .055f, .09f, .98f);
                 endOverlayText = CreateOverlayText(card.transform, "", 30);
             }
-            endOverlayText.text = title + "\n" + reason + "\n\nPress R to retry";
+            endOverlayText.text = title + "\n" + reason + (showRetry ? "\n\nPress R to retry" : "");
             endOverlay.SetActive(true);
             endOverlay.transform.SetAsLastSibling();
         }
@@ -525,12 +541,12 @@ namespace TheLastMemory
 
         private void CreateCoreLabel(Transform item, int number)
         {
-            GameObject labelObject = new GameObject("CORE " + number, typeof(TextMesh));
+            GameObject labelObject = new GameObject("MEMORY " + number, typeof(TextMesh));
             labelObject.transform.SetParent(item, false);
             labelObject.transform.localPosition = Vector3.up * 0.85f;
             labelObject.transform.localRotation = Quaternion.Euler(90f, 0f, 0f);
             TextMesh label = labelObject.GetComponent<TextMesh>();
-            label.text = "CORE " + number + "\nWALK CLOSE OR PRESS E";
+            label.text = "MEMORY " + number + "\nWALK CLOSE OR PRESS E";
             label.anchor = TextAnchor.MiddleCenter;
             label.alignment = TextAlignment.Center;
             label.characterSize = 0.22f;

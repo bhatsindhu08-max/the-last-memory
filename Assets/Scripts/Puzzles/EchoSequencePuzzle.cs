@@ -187,7 +187,7 @@ namespace TheLastMemory
 
             float width = Mathf.Min(540f, Mathf.Max(300f, Screen.width - 36f));
             GUI.Box(new Rect(18f, 18f, width, 148f),
-                "LEVEL 1 — WHO AM I?  |  ECHO TRIAL", hudTitleStyle);
+                "LEVEL 1 — GET YOUR SENSES BACK  |  ECHO TRIAL", hudTitleStyle);
             GUI.Label(new Rect(32f, 50f, width - 28f, 42f),
                 $"HOW TO PLAY: Click Game view. Listen to four tones, then aim at the machines and press E in order. " +
                 $"{maxMistakes} mistakes or {Mathf.CeilToInt(timeLimit)}s ends the trial. R retries.", hudBodyStyle);
