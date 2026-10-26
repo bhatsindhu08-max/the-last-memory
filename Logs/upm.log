@@ -25,3 +25,28 @@ params: {}
 [2026-10-25T22:38:28.429Z][INFO] project:list-packages <-- Request received
 params: {}
 [2026-10-25T22:38:33.154Z][INFO] project:list-packages --> 200 (4725 ms)
+[2026-10-25T23:01:41.148Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-25T23:01:41.275Z][INFO] project:list-packages --> 200 (133 ms)
+[2026-10-25T23:01:41.404Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-25T23:01:41.408Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-25T23:11:10.941Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-25T23:11:11.063Z][INFO] project:list-packages --> 200 (127 ms)
+[2026-10-25T23:11:11.192Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-25T23:11:11.195Z][INFO] config:project:get-registries --> 200 (4 ms)
+[2026-10-25T23:23:18.031Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-25T23:23:18.151Z][INFO] project:list-packages --> 200 (123 ms)
+[2026-10-25T23:23:18.294Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-25T23:23:18.297Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-25T23:44:38.869Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-25T23:44:38.993Z][INFO] project:list-packages --> 200 (126 ms)
+[2026-10-25T23:44:39.133Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-25T23:44:39.136Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-26T00:03:38.664Z][INFO] Received shutdown request (SIGTERM), shutting down Unity Package Manager

@@ -639,3 +639,1212 @@ Total: 14.363125 ms (FindLiveObjects: 0.368167 ms CreateObjectMapping: 0.154750 
 
 [Licensing::Client] Successfully resolved entitlement details
 Asset Pipeline Refresh (id=dba8df5a9e67c4bb582fbf4ceb6599e7): Total: 0.218 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+Starting: /Applications/Unity/Hub/Editor/6000.6.4f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/sindhubhat/the-last-memory
+ExitCode: 0 Duration: 2s822ms
+[575/746    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[738/746    2s] Csc Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets/Scripts/Puzzles/NeonCourierMission.cs(102,47): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/MainMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Player/PlayerController.cs(49,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(49,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+[739/746    0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp.dll, with 143 defines and 337 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+1 processor(s) skipped this assembly
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[740/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[741/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[742/746    0s] Csc Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets/Editor/ConnectLevelOneAreas.cs(31,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+[743/746    0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-Editor.dll, with 141 defines and 357 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+1 processor(s) skipped this assembly
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[744/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+[745/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+*** Tundra build success (2.79 seconds), 9 items updated, 746 evaluated
+Assets/Scripts/Puzzles/NeonCourierMission.cs(102,47): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/MainMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Player/PlayerController.cs(49,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(49,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+inMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Player/PlayerController.cs(49,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(49,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+Assets/Editor/ConnectLevelOneAreas.cs(31,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+as.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Total cache size 267627648
+Total cache size after purge 267627648, took 00:00:00.2622254
+Thread 0x751a1a3000 may have been prematurely finalized
+<CFData 0x7b37c74af0 [0x2056bef70]>{length = 6, capacity = 6, bytes = 0x740ea49c8614}
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+2026-10-26 04:31:41.065 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b36d74820 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.324 seconds
+Domain Reload Profiling: 2111ms
+	BeginReloadAssembly (451ms)
+		DisableScriptedObjects (119ms)
+		CreateAndSetChildDomain (111ms)
+	RebuildCommonClasses (7ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (274ms)
+		LoadAssemblies (132ms)
+		TypeCache.Refresh (13ms)
+		AnalyzeDomain (92ms)
+			BuildScriptInfoCaches (87ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (1325ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (266ms)
+			ProcessInitializeOnLoadAttributes (266ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+		AwakeInstancesAfterBackupRestoration (414ms)
+
+Asset Pipeline Refresh (id=a78a5bcc88ba94c638c961f76f7bad51): Total: 6.670 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=2081 ms
+		Asset DB Callback time: managed=61 ms, native=25 ms
+		Scripting: domain reloads=1, domain reload time=839 ms, compile time=1 ms, other=0 ms
+		Project Asset Count: scripts=1091, non-scripts=2143
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokeCustomDependenciesCallbacks: 0.238ms
+	InvokePackagesCallback: 1.288ms
+	ApplyChangesToAssetFolders: 0.183ms
+	Scan: 239.625ms
+	Collect global state as custom dependencies: 4.754ms
+	ProcessAssetsWithTransientArtifactChanges: 3.254ms
+	CategorizeAssets: 163.098ms
+	CompileScripts: 1.416ms
+	ImportOutOfDateAssets: 1333.364ms (1329.540ms without children)
+		CollectScriptTypesHashes: 47.453ms
+		ReloadNativeAssets: 0.947ms
+		UnloadImportedAssets: 1.934ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.406ms
+		ImportSchedulerStart: 0.509ms
+	PostProcessAllAssets: 46.439ms
+		ShaderAssetModifiedCallback 1.435ms
+		VCAutoAddAssetPostprocess 0.618ms
+		PostProcessCallbackCreateDeferredMaterials 0.370ms
+		Canvas.OnAllAssetImport 0.196ms
+		XRBuildSystem.XRAssetImported 0.091ms
+		MonoPostProcessAllAssets: 41.605ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.148ms
+			SyncVS.PostprocessSyncProject 5.437ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.747ms
+			AssetChangedListener.OnPostprocessAllAssets 3.314ms
+			AssetPostprocessor.OnPostprocessAllAssets 2.594ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.072ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.069ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.908ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.754ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.538ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.505ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.493ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.397ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.366ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.336ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.314ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.223ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.213ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.213ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.199ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.162ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.159ms
+			PostProcessor.OnPostprocessAllAssets 0.153ms
+			AssetEvents.OnPostprocessAllAssets 0.127ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.121ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.097ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.089ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.078ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.076ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.075ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.070ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.062ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.052ms
+	PostAssetChangesProfiler: 11.613ms
+	PersistCurrentRevisions: 0.087ms
+	GenerateScriptTypeHashes: 3.057ms
+	GenerateScriptTypeSerializationHashes: 5.049ms
+	Untracked: 889.262ms
+
+[Licensing::Client] Successfully resolved entitlement details
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            4.532 ms
+	Integration:            51.030 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.000 ms
+	Total Operation Time:   55.566 ms
+Color primaries is unknown or unsupported by AVFoundationVideoMedia. Falling back to default may result in color shift. /Users/sindhubhat/the-last-memory/Assets/StreamingAssets/game-intro.mp4
+Thread 0x17b723000 may have been prematurely finalized
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.559 ms
+	Integration:            11.365 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.004 ms
+	Total Operation Time:   12.928 ms
+Unloading 18 unused Assets / (32.6 KB). Loaded Objects now: 7043.
+Memory consumption went from 299.2 MB to 299.1 MB.
+Total: 16.275792 ms (FindLiveObjects: 0.598750 ms CreateObjectMapping: 0.139125 ms MarkObjects: 14.070750 ms  DeleteObjects: 1.357625 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+GUILayout: Mismatched LayoutGroup.Ignore
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+Starting: /Applications/Unity/Hub/Editor/6000.6.4f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/sindhubhat/the-last-memory
+ExitCode: 0 Duration: 0s983ms
+[575/746    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[738/746    0s] Csc Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets/Scripts/Puzzles/NeonCourierMission.cs(102,47): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Player/PlayerController.cs(51,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(51,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/MainMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+[739/746    0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp.dll, with 143 defines and 337 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+1 processor(s) skipped this assembly
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[740/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[741/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[742/746    0s] Csc Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets/Editor/ConnectLevelOneAreas.cs(31,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+[743/746    0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-Editor.dll, with 141 defines and 357 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+1 processor(s) skipped this assembly
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[744/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[745/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (0.96 seconds), 9 items updated, 746 evaluated
+Assets/Scripts/Puzzles/NeonCourierMission.cs(102,47): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Player/PlayerController.cs(51,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(51,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/MainMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+ayer/PlayerController.cs(51,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(51,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/MainMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+Assets/Editor/ConnectLevelOneAreas.cs(31,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+as.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Total cache size 267627648
+Total cache size after purge 267627648, took 00:00:00.2893152
+Thread 0x17015f000 may have been prematurely finalized
+Refreshing native plugins compatible for Editor in 2.29 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+2026-10-26 04:41:10.861 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b36da6800 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.291 seconds
+Domain Reload Profiling: 2046ms
+	BeginReloadAssembly (409ms)
+		DisableScriptedObjects (109ms)
+		CreateAndSetChildDomain (82ms)
+	RebuildCommonClasses (12ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (273ms)
+		LoadAssemblies (138ms)
+		TypeCache.Refresh (13ms)
+		AnalyzeDomain (89ms)
+			BuildScriptInfoCaches (85ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (1292ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (237ms)
+			ProcessInitializeOnLoadAttributes (264ms)
+			ProcessInitializeOnLoadMethodAttributes (73ms)
+		AwakeInstancesAfterBackupRestoration (402ms)
+
+Asset Pipeline Refresh (id=a24234d526b0542b0a8cfa706862d79b): Total: 4.276 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1943 ms
+		Asset DB Callback time: managed=51 ms, native=16 ms
+		Scripting: domain reloads=1, domain reload time=835 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=1091, non-scripts=2143
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 0.767ms
+	ApplyChangesToAssetFolders: 0.194ms
+	Scan: 221.493ms
+	Collect global state as custom dependencies: 5.141ms
+	ProcessAssetsWithTransientArtifactChanges: 3.429ms
+	CategorizeAssets: 165.236ms
+	CompileScripts: 1.616ms
+	ImportOutOfDateAssets: 1299.497ms (1297.142ms without children)
+		CollectScriptTypesHashes: 5.723ms
+		ReloadNativeAssets: 1.062ms
+		UnloadImportedAssets: 0.250ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.441ms
+		ImportSchedulerStart: 0.572ms
+	PostProcessAllAssets: 46.178ms
+		ShaderAssetModifiedCallback 0.424ms
+		PostProcessCallbackCreateDeferredMaterials 0.300ms
+		Canvas.OnAllAssetImport 0.255ms
+		VCAutoAddAssetPostprocess 0.216ms
+		XRBuildSystem.XRAssetImported 0.094ms
+		MonoPostProcessAllAssets: 41.888ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.616ms
+			SyncVS.PostprocessSyncProject 5.217ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.559ms
+			AssetChangedListener.OnPostprocessAllAssets 3.463ms
+			AssetPostprocessor.OnPostprocessAllAssets 2.728ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.096ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.072ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.890ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.787ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.512ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.469ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.452ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.421ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.357ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.342ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.322ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.217ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.215ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.213ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.195ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.160ms
+			PostProcessor.OnPostprocessAllAssets 0.157ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.155ms
+			AssetEvents.OnPostprocessAllAssets 0.132ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.122ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.099ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.090ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.077ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.074ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.072ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.062ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.062ms
+	PostAssetChangesProfiler: 4.399ms
+	PersistCurrentRevisions: 0.087ms
+	GenerateScriptTypeHashes: 1.689ms
+	GenerateScriptTypeSerializationHashes: 2.968ms
+	Untracked: 876.790ms
+
+[Licensing::Client] Successfully resolved entitlement details
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            4.084 ms
+	Integration:            46.823 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.004 ms
+	Total Operation Time:   50.912 ms
+Color primaries is unknown or unsupported by AVFoundationVideoMedia. Falling back to default may result in color shift. /Users/sindhubhat/the-last-memory/Assets/StreamingAssets/game-intro.mp4
+Thread 0x17b687000 may have been prematurely finalized
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.680 ms
+	Integration:            12.766 ms
+	Integration of assets:  0.006 ms
+	Thread Wait Time:       0.001 ms
+	Total Operation Time:   14.453 ms
+Unloading 14 unused Assets / (85.9 KB). Loaded Objects now: 7046.
+Memory consumption went from 293.7 MB to 293.6 MB.
+Total: 17.832583 ms (FindLiveObjects: 0.677167 ms CreateObjectMapping: 0.256000 ms MarkObjects: 16.660041 ms  DeleteObjects: 0.119500 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+2026-10-26 04:53:13.309 Unity[32957:611785] Warning: Window move completed without beginning
+2026-10-26 04:53:13.364 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b36da7de0 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Starting: /Applications/Unity/Hub/Editor/6000.6.4f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/sindhubhat/the-last-memory
+ExitCode: 0 Duration: 2s795ms
+[575/746    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[738/746    2s] Csc Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets/Scripts/Puzzles/NeonCourierMission.cs(102,47): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/MainMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Player/PlayerController.cs(52,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(52,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+[739/746    0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp.dll, with 143 defines and 337 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+1 processor(s) skipped this assembly
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[740/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[741/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[742/746    0s] Csc Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets/Editor/ConnectLevelOneAreas.cs(31,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+[743/746    0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-Editor.dll, with 141 defines and 357 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+1 processor(s) skipped this assembly
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[744/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+[745/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+*** Tundra build success (2.77 seconds), 9 items updated, 746 evaluated
+Assets/Scripts/Puzzles/NeonCourierMission.cs(102,47): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/MainMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Player/PlayerController.cs(52,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(52,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+Assets/Editor/ConnectLevelOneAreas.cs(31,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Total cache size 267627648
+Total cache size after purge 267627648, took 00:00:00.2366549
+Thread 0x176b3f000 may have been prematurely finalized
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+2026-10-26 04:53:17.971 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b36d74460 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.320 seconds
+Domain Reload Profiling: 2013ms
+	BeginReloadAssembly (361ms)
+		DisableScriptedObjects (79ms)
+		CreateAndSetChildDomain (102ms)
+	RebuildCommonClasses (8ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (269ms)
+		LoadAssemblies (122ms)
+		TypeCache.Refresh (13ms)
+		AnalyzeDomain (88ms)
+			BuildScriptInfoCaches (83ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (1321ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (275ms)
+			ProcessInitializeOnLoadAttributes (258ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+		AwakeInstancesAfterBackupRestoration (404ms)
+
+Asset Pipeline Refresh (id=d73f203e5c2164f8892f9cb699c32993): Total: 6.039 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1891 ms
+		Asset DB Callback time: managed=49 ms, native=15 ms
+		Scripting: domain reloads=1, domain reload time=744 ms, compile time=2 ms, other=0 ms
+		Project Asset Count: scripts=1091, non-scripts=2143
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 2.719ms
+	ApplyChangesToAssetFolders: 0.247ms
+	Scan: 224.229ms
+	Collect global state as custom dependencies: 5.771ms
+	ProcessAssetsWithTransientArtifactChanges: 4.067ms
+	CategorizeAssets: 173.113ms
+	CompileScripts: 1.505ms
+	ImportOutOfDateAssets: 1327.433ms (1325.158ms without children)
+		CollectScriptTypesHashes: 2.997ms
+		ReloadNativeAssets: 0.999ms
+		UnloadImportedAssets: 0.305ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.415ms
+		ImportSchedulerStart: 0.526ms
+	PostProcessAllAssets: 50.450ms
+		PostProcessCallbackCreateDeferredMaterials 0.997ms
+		ShaderAssetModifiedCallback 0.502ms
+		VCAutoAddAssetPostprocess 0.437ms
+		Canvas.OnAllAssetImport 0.217ms
+		PostprocessAssetsUpdateCachedIcon 0.170ms
+		XRBuildSystem.XRAssetImported 0.101ms
+		MonoPostProcessAllAssets: 45.224ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 14.492ms
+			SyncVS.PostprocessSyncProject 4.801ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.614ms
+			AssetChangedListener.OnPostprocessAllAssets 3.492ms
+			AssetPostprocessor.OnPostprocessAllAssets 2.375ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.128ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.031ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.970ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.829ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.578ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.462ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.455ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.390ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.350ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.344ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.317ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.213ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.209ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.195ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.190ms
+			PostProcessor.OnPostprocessAllAssets 0.169ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.157ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.154ms
+			AssetEvents.OnPostprocessAllAssets 0.127ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.121ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.092ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.088ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.077ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.074ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.072ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.061ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.061ms
+	PostAssetChangesProfiler: 5.333ms
+	PersistCurrentRevisions: 0.088ms
+	GenerateScriptTypeHashes: 1.704ms
+	GenerateScriptTypeSerializationHashes: 3.000ms
+	Untracked: 772.911ms
+
+[Licensing::Client] Successfully resolved entitlement details
+Asset Pipeline Refresh (id=92368ca5469af4913b380594bb0f7ab1): Total: 0.211 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            9.972 ms
+	Integration:            72.128 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.001 ms
+	Total Operation Time:   82.104 ms
+Color primaries is unknown or unsupported by AVFoundationVideoMedia. Falling back to default may result in color shift. /Users/sindhubhat/the-last-memory/Assets/StreamingAssets/game-intro.mp4
+Thread 0x7501dd3000 may have been prematurely finalized
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.620 ms
+	Integration:            11.860 ms
+	Integration of assets:  0.005 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   13.494 ms
+Unloading 14 unused Assets / (35.4 KB). Loaded Objects now: 7049.
+Memory consumption went from 299.6 MB to 299.5 MB.
+Total: 14.586959 ms (FindLiveObjects: 0.496083 ms CreateObjectMapping: 0.336750 ms MarkObjects: 13.322541 ms  DeleteObjects: 0.100833 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Client] Successfully resolved entitlement details
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+[Licensing::Client] Successfully resolved entitlement details
+2026-10-26 05:14:34.348 Unity[32957:611785] Warning: Window move completed without beginning
+2026-10-26 05:14:34.375 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b36da4aa0 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Starting: /Applications/Unity/Hub/Editor/6000.6.4f1/Unity.app/Contents/Resources/BuildPipeline/bee_backend --ipc --defer-dag-verification --dagfile="Library/Bee/200b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: /Users/sindhubhat/the-last-memory
+ExitCode: 0 Duration: 2s724ms
+[575/746    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[738/746    2s] Csc Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets/Scripts/Puzzles/NeonCourierMission.cs(102,47): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/MainMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Player/PlayerController.cs(50,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(50,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+[739/746    0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Assembly-CSharp.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp.dll, with 143 defines and 337 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+1 processor(s) skipped this assembly
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[740/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[741/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[742/746    0s] Csc Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets/Editor/ConnectLevelOneAreas.cs(31,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+[743/746    0s] ILPostProcess Library/Bee/artifacts/200b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/200b0aE.dag/Assembly-CSharp-Editor.dll, with 141 defines and 357 references
+processors: Unity.Jobs.CodeGen.JobsILPostProcessor, zzzUnity.Burst.CodeGen.BurstILPostProcessor
+1 processor(s) skipped this assembly
+running Unity.Jobs.CodeGen.JobsILPostProcessor
+[744/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[745/746    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (2.70 seconds), 9 items updated, 746 evaluated
+Assets/Scripts/Puzzles/NeonCourierMission.cs(102,47): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/MainMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Player/PlayerController.cs(50,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(50,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+inMenuBootstrap.cs(63,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/MainMenuBootstrap.cs(63,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/NeonCourierMission.cs(252,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/LevelOneRedCodeTheme.cs(179,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/CyberMazeMission.cs(397,30): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Player/PlayerController.cs(50,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Scripts/Player/PlayerController.cs(50,42): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Scripts/Puzzles/EchoSequencePuzzle.cs(160,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(500,39): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(599,43): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Scripts/Puzzles/DotCircuitPuzzle.cs(21,46): warning CS0414: The field 'DotCircuitPuzzle.maxMistakes' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(25,51): warning CS0414: The field 'NeonCourierMission.alertRadius' is assigned but its value is never used
+Assets/Scripts/Puzzles/NeonCourierMission.cs(21,46): warning CS0414: The field 'NeonCourierMission.cachesRequired' is assigned but its value is never used
+Assets/Editor/ConnectLevelOneAreas.cs(31,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+as.cs(32,45): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/ConnectLevelOneAreas.cs(40,34): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/AddMemoryToLevelOne.cs(29,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(30,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,89): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/AddMemoryToLevelOne.cs(36,13): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(33,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(34,35): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(35,39): warning CS0618: 'Object.FindFirstObjectByType<T>(FindObjectsInactive)' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets/Editor/RepairLevelOneFlow.cs(56,132): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(56,55): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/RepairLevelOneFlow.cs(81,106): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/RepairLevelOneFlow.cs(81,41): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,117): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelThreeNeonCourier.cs(49,45): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,122): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets/Editor/CreateLevelFourCyberMaze.cs(425,48): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Thread 0x17b2fb000 may have been prematurely finalized
+Total cache size 267627648
+Total cache size after purge 267627648, took 00:00:00.2670582
+Refreshing native plugins compatible for Editor in 2.01 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+2026-10-26 05:14:38.812 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b36da5220 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  1.262 seconds
+Domain Reload Profiling: 1942ms
+	BeginReloadAssembly (350ms)
+		DisableScriptedObjects (89ms)
+		CreateAndSetChildDomain (84ms)
+	RebuildCommonClasses (8ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (264ms)
+		LoadAssemblies (118ms)
+		TypeCache.Refresh (13ms)
+		AnalyzeDomain (87ms)
+			BuildScriptInfoCaches (83ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (1263ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (244ms)
+			ProcessInitializeOnLoadAttributes (257ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
+		AwakeInstancesAfterBackupRestoration (397ms)
+
+Asset Pipeline Refresh (id=c724f7cd587f8460eb1c82eac6000bc6): Total: 5.860 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=1882 ms
+		Asset DB Callback time: managed=57 ms, native=10 ms
+		Scripting: domain reloads=1, domain reload time=723 ms, compile time=1 ms, other=0 ms
+		Project Asset Count: scripts=1091, non-scripts=2143
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 1
+	InvokePackagesCallback: 0.702ms
+	ApplyChangesToAssetFolders: 0.162ms
+	Scan: 220.127ms
+	Collect global state as custom dependencies: 4.756ms
+	ProcessAssetsWithTransientArtifactChanges: 2.710ms
+	CategorizeAssets: 162.267ms
+	CompileScripts: 1.430ms
+	ImportOutOfDateAssets: 1269.800ms (1267.595ms without children)
+		CollectScriptTypesHashes: 3.391ms
+		ReloadNativeAssets: 0.955ms
+		UnloadImportedAssets: 0.230ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.407ms
+		ImportSchedulerStart: 0.588ms
+	PostProcessAllAssets: 43.697ms
+		PostProcessCallbackCreateDeferredMaterials 0.581ms
+		ShaderAssetModifiedCallback 0.366ms
+		VCAutoAddAssetPostprocess 0.209ms
+		Canvas.OnAllAssetImport 0.167ms
+		XRBuildSystem.XRAssetImported 0.088ms
+		MonoPostProcessAllAssets: 40.374ms
+			UniversalRenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 10.458ms
+			SyncVS.PostprocessSyncProject 4.686ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 4.313ms
+			AssetChangedListener.OnPostprocessAllAssets 3.498ms
+			AssetPostprocessor.OnPostprocessAllAssets 2.373ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.014ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 1.006ms
+			ShaderGraphAssetPostProcessor.OnPostprocessAllAssets 0.817ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 0.812ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.536ms
+			MaterialPostprocessor.OnPostprocessAllAssets 0.485ms
+			ProjectSettingsPostprocessor.OnPostprocessAllAssets 0.466ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.381ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.340ms
+			TMPro_TexturePostProcessor.OnPostprocessAllAssets 0.325ms
+			ShaderReflectionAssetPostProcessor.OnPostprocessAllAssets 0.312ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.208ms
+			InputActionAssetPostprocessor.OnPostprocessAllAssets 0.195ms
+			UVCSAssetPostprocessor.OnPostprocessAllAssets 0.195ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.181ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.158ms
+			PostProcessor.OnPostprocessAllAssets 0.151ms
+			InputActionJsonNameModifierAssetProcessor.OnPostprocessAllAssets 0.151ms
+			AssetEvents.OnPostprocessAllAssets 0.127ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 0.120ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.092ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.085ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.078ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.074ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.072ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.059ms
+			AssetReloadNotifier.OnPostprocessAllAssets 0.056ms
+	PostAssetChangesProfiler: 3.663ms
+	PersistCurrentRevisions: 0.087ms
+	GenerateScriptTypeHashes: 1.601ms
+	GenerateScriptTypeSerializationHashes: 2.830ms
+	Untracked: 753.155ms
+
+[Licensing::Client] Successfully resolved entitlement details
+2026-10-26 05:19:24.770 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b36da78e0 SDF, ke='Command-F12'>, but is only supported for system-provided menu items; will not be used
+Asset Pipeline Refresh (id=2a8bc7110d09c4073a40de679e1d04fc): Total: 0.124 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            7.817 ms
+	Integration:            74.448 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.001 ms
+	Total Operation Time:   82.268 ms
+Thread 0x17b8a3000 may have been prematurely finalized
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            3.566 ms
+	Integration:            17.031 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.004 ms
+	Total Operation Time:   20.605 ms
+Unloading 14 unused Assets / (4.6 KB). Loaded Objects now: 7052.
+Memory consumption went from 302.2 MB to 302.1 MB.
+Total: 24.811792 ms (FindLiveObjects: 0.803916 ms CreateObjectMapping: 0.438334 ms MarkObjects: 21.882708 ms  DeleteObjects: 1.386875 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+Asset Pipeline Refresh (id=b23f98d3f586f4ddb90556c497aca404): Total: 0.147 seconds - Initiated by RefreshV2(AllowForceSynchronousImport)
+Thread 0x17b9bb000 may have been prematurely finalized
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.998 ms
+	Integration:            23.110 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.006 ms
+	Total Operation Time:   24.116 ms
+Thread 0x17b9bb000 may have been prematurely finalized
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.708 ms
+	Integration:            10.842 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.005 ms
+	Total Operation Time:   11.556 ms
+Unloading 3 unused Assets / (2.2 KB). Loaded Objects now: 7052.
+Memory consumption went from 301.8 MB to 301.8 MB.
+Total: 17.246792 ms (FindLiveObjects: 0.414791 ms CreateObjectMapping: 0.235542 ms MarkObjects: 16.431833 ms  DeleteObjects: 0.055375 ms)
+
+Thread 0x17b9bb000 may have been prematurely finalized
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.594 ms
+	Integration:            13.290 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.006 ms
+	Total Operation Time:   13.890 ms
+Color primaries is unknown or unsupported by AVFoundationVideoMedia. Falling back to default may result in color shift. /Users/sindhubhat/the-last-memory/Assets/StreamingAssets/game-intro.mp4
+Thread 0x7501dd3000 may have been prematurely finalized
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            3.224 ms
+	Integration:            18.608 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.018 ms
+	Total Operation Time:   21.851 ms
+Unloading 3 unused Assets / (1.0 MB). Loaded Objects now: 7052.
+Memory consumption went from 301.9 MB to 300.9 MB.
+Total: 14.255584 ms (FindLiveObjects: 0.380583 ms CreateObjectMapping: 0.108750 ms MarkObjects: 13.391584 ms  DeleteObjects: 0.267375 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+2026-10-26 05:22:11.308 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b36d9f2a0 UI Toolkit Debugger, ke='Command-F5'>, but is only supported for system-provided menu items; will not be used
+Thread 0x17b47b000 may have been prematurely finalized
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.731 ms
+	Integration:            15.302 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.006 ms
+	Total Operation Time:   16.042 ms
+Thread 0x17b60b000 may have been prematurely finalized
+Unloading 8 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.688 ms
+	Integration:            12.313 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.013 ms
+	Total Operation Time:   13.015 ms
+Unloading 3 unused Assets / (1.0 MB). Loaded Objects now: 7038.
+Memory consumption went from 300.0 MB to 299.0 MB.
+Total: 13.695208 ms (FindLiveObjects: 0.369208 ms CreateObjectMapping: 0.113042 ms MarkObjects: 13.053167 ms  DeleteObjects: 0.048125 ms)
+
+2026-10-26 05:22:18.806 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b37e04500 UI Toolkit Debugger, ke='Command-F5'>, but is only supported for system-provided menu items; will not be used
+Opening scene 'Assets/Scenes/SampleScene.unity'
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/SampleScene.unity'
+	Deserialize:            5.268 ms
+	Integration:            10.693 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.003 ms
+	Total Operation Time:   15.965 ms
+Unloading 0 unused Assets / (Unknown). Loaded Objects now: 7147.
+Memory consumption went from 306.8 MB to 306.8 MB.
+Total: 16.985500 ms (FindLiveObjects: 0.364875 ms CreateObjectMapping: 0.097834 ms MarkObjects: 16.407666 ms  DeleteObjects: 0.007000 ms)
+
+Opening scene 'Assets/Scenes/SampleScene.unity'
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/SampleScene.unity'
+	Deserialize:            2.867 ms
+	Integration:            9.915 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.027 ms
+	Total Operation Time:   12.810 ms
+Unloading 0 unused Assets / (9.6 KB). Loaded Objects now: 7147.
+Memory consumption went from 306.5 MB to 306.5 MB.
+Total: 16.136417 ms (FindLiveObjects: 0.365291 ms CreateObjectMapping: 0.070000 ms MarkObjects: 15.587625 ms  DeleteObjects: 0.008375 ms)
+
+Thread 0x17d04f000 may have been prematurely finalized
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.645 ms
+	Integration:            14.398 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.006 ms
+	Total Operation Time:   15.050 ms
+2026-10-26 05:22:29.189 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b36d721c0 UI Toolkit Debugger, ke='Command-F5'>, but is only supported for system-provided menu items; will not be used
+Color primaries is unknown or unsupported by AVFoundationVideoMedia. Falling back to default may result in color shift. /Users/sindhubhat/the-last-memory/Assets/StreamingAssets/game-intro.mp4
+Thread 0x17d04f000 may have been prematurely finalized
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            10.352 ms
+	Integration:            23.398 ms
+	Integration of assets:  0.106 ms
+	Thread Wait Time:       -0.101 ms
+	Total Operation Time:   33.755 ms
+Unloading 3 unused Assets / (344.6 KB). Loaded Objects now: 7008.
+Memory consumption went from 299.2 MB to 298.9 MB.
+Total: 28.016000 ms (FindLiveObjects: 0.761583 ms CreateObjectMapping: 0.315166 ms MarkObjects: 26.302167 ms  DeleteObjects: 0.270625 ms)
+
+[Licensing::Client] Successfully resolved entitlement details
+Opening scene 'Assets/Scenes/SampleScene.unity'
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/SampleScene.unity'
+	Deserialize:            6.628 ms
+	Integration:            12.680 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.004 ms
+	Total Operation Time:   19.314 ms
+Unloading 0 unused Assets / (77.8 KB). Loaded Objects now: 7150.
+Memory consumption went from 307.7 MB to 307.7 MB.
+Total: 20.650083 ms (FindLiveObjects: 0.386959 ms CreateObjectMapping: 0.050083 ms MarkObjects: 20.098667 ms  DeleteObjects: 0.006625 ms)
+
+Opening scene 'Assets/Scenes/SampleScene.unity'
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/SampleScene.unity'
+	Deserialize:            2.870 ms
+	Integration:            11.744 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.014 ms
+	Total Operation Time:   14.630 ms
+Unloading 0 unused Assets / (1.6 KB). Loaded Objects now: 7150.
+Memory consumption went from 306.9 MB to 306.9 MB.
+Total: 19.361000 ms (FindLiveObjects: 0.442416 ms CreateObjectMapping: 0.052917 ms MarkObjects: 18.752667 ms  DeleteObjects: 0.007000 ms)
+
+Thread 0x17b47b000 may have been prematurely finalized
+Entering Playmode with Reload Domain disabled.
+If you experience any issues, please disable "Enter Play Mode Options" in Editor Settings
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.801 ms
+	Integration:            19.475 ms
+	Integration of assets:  0.001 ms
+	Thread Wait Time:       0.005 ms
+	Total Operation Time:   20.281 ms
+2026-10-26 05:24:48.532 Unity[32957:611785] NSEventModifierFlagFunction specified to -setKeyEquivalentModifierMask: for item <NSMenuItem: 0x7b37e05900 UI Toolkit Debugger, ke='Command-F5'>, but is only supported for system-provided menu items; will not be used
+Color primaries is unknown or unsupported by AVFoundationVideoMedia. Falling back to default may result in color shift. /Users/sindhubhat/the-last-memory/Assets/StreamingAssets/game-intro.mp4
+Sense Module recovered. Echo puzzle complete.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+TheLastMemory.EchoSequencePuzzle:PressMachine (int) (at Assets/Scripts/Puzzles/EchoSequencePuzzle.cs:104)
+TheLastMemory.EchoToneMachine:Interact () (at Assets/Scripts/Puzzles/EchoToneMachine.cs:35)
+TheLastMemory.InteractionController:Update () (at Assets/Scripts/Interaction/InteractionController.cs:45)
+
+(Filename: Assets/Scripts/Puzzles/EchoSequencePuzzle.cs Line: 104)
+
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.818958 ms
+Loaded scene 'Assets/Scenes/Level2_DotCircuit.unity'
+	Deserialize:            46.639 ms
+	Integration:            91.518 ms
+	Integration of assets:  0.444 ms
+	Thread Wait Time:       4.386 ms
+	Total Operation Time:   142.987 ms
+Unloading 82 unused Assets / (419.6 KB). Loaded Objects now: 7265.
+Memory consumption went from 305.2 MB to 304.8 MB.
+Total: 38.933542 ms (FindLiveObjects: 1.722209 ms CreateObjectMapping: 0.667208 ms MarkObjects: 35.097125 ms  DeleteObjects: 0.486709 ms)
+
+Level 2 complete: all eight glass rows crossed.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:Log (object,UnityEngine.Object)
+TheLastMemory.DotCircuitPuzzle:CheckRiddleCheckpoint () (at Assets/Scripts/Puzzles/DotCircuitPuzzle.cs:386)
+TheLastMemory.DotCircuitPuzzle:Update () (at Assets/Scripts/Puzzles/DotCircuitPuzzle.cs:332)
+
+(Filename: Assets/Scripts/Puzzles/DotCircuitPuzzle.cs Line: 386)
+
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 12.044084 ms
+Loaded scene 'Assets/Scenes/Level3_NeonCourier.unity'
+	Deserialize:            33.456 ms
+	Integration:            44.442 ms
+	Integration of assets:  0.249 ms
+	Thread Wait Time:       3.635 ms
+	Total Operation Time:   81.782 ms
+Unloading 63 unused Assets / (315.3 KB). Loaded Objects now: 7572.
+Memory consumption went from 325.3 MB to 325.0 MB.
+Total: 36.972959 ms (FindLiveObjects: 2.599792 ms CreateObjectMapping: 0.491708 ms MarkObjects: 33.274625 ms  DeleteObjects: 0.400958 ms)
+
+Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.705833 ms
+Loaded scene 'Assets/Scenes/Level4_CyberMaze.unity'
+	Deserialize:            46.506 ms
+	Integration:            43.969 ms
+	Integration of assets:  0.641 ms
+	Thread Wait Time:       2.117 ms
+	Total Operation Time:   93.233 ms
+Unloading 24 unused Assets / (82.4 KB). Loaded Objects now: 9599.
+Memory consumption went from 326.8 MB to 326.8 MB.
+Total: 29.678417 ms (FindLiveObjects: 1.447625 ms CreateObjectMapping: 0.203083 ms MarkObjects: 27.000958 ms  DeleteObjects: 0.879208 ms)
+
+MonoPathRemapper: Attempts to remap: 86612; Successful remaps: 14388
+Thread 0x17aeb7000 may have been prematurely finalized
+Thread 0x754d933000 may have been prematurely finalized
+Curl error 42: Callback aborted
+Serialized file version minimum: 23, current 23
+[LAYOUT] About to save layout /Users/sindhubhat/the-last-memory/UserSettings/Layouts/default-6000.dwlt
+[LAYOUT] About to save layout /Users/sindhubhat/Library/Preferences/Unity/Editor-5.x/Layouts/current/default-6000.dwlt
+Thread 0x7500c87000 may have been prematurely finalized
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.render-pipelines.core/Editor/Deprecated.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Thread 0x170307000 may have been prematurely finalized
+Thread 0x17041f000 may have been prematurely finalized
+Thread 0x170537000 may have been prematurely finalized
+Thread 0x17064f000 may have been prematurely finalized
+Thread 0x1704ab000 may have been prematurely finalized
+Thread 0x170393000 may have been prematurely finalized
+Thread 0x1705c3000 may have been prematurely finalized
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+[Licensing::IpcConnector] LicenseClient-sindhubhat-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-sindhubhat channel disconnected successfully.
+Shut down UDS service system complete
+Thread 0x179a5b000 may have been prematurely finalized
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+debugger-agent: Unable to listen on 91
+VBCSCompilerPreWarmer: requested VBCSCompiler shutdown
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1792973018706,"processId":32957,"allocatedMemory":14322657,"memoryLabels":[{"Default":205868},{"Permanent":15672},{"Thread":1056736},{"Manager":812502},{"VertexData":8},{"Geometry":408},{"Shader":854711},{"Material":212},{"TextureCache":152},{"GfxDevice":55856},{"GfxThread":8960},{"Animation":968},{"FreeType":8},{"FontEngine":736},{"Physics":2002},{"Physics2D":16},{"Serialization":30184},{"Input":43216},{"JobScheduler":448},{"TextLib":16569},{"Mono":56},{"MonoCode":144},{"ScriptingNativeRuntime":155024},{"BaseObject":73648},{"Resource":1460},{"Renderer":2736},{"Transform":4693},{"File":25431},{"WebCam":32},{"Culling":32},{"Terrain":11346},{"Wind":24},{"String":1816275},{"StaticString":3808},{"Utility":2691200},{"PoolAlloc":2152},{"AI":80},{"TypeTree":735377},{"ScriptManager":37968},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7240},{"Director":8288},{"CloudService":7296},{"WebRequest":4486},{"VR":49426},{"SceneManager":616},{"Video":2112},{"LazyScriptCache":32},{"NativeArray":4680},{"Camera":1177},{"Secure":9865},{"SerializationCache":9704},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57504},{"StaticSafetyDebugInfo":278528},{"Baselib":16},{"Analytics":568},{"Hierarchy":1492},{"UIElements":40},{"CoreStats":14536},{"Identifiers":7152},{"Gui":280983},{"EditorUtility":354381},{"VersionControl":8},{"Undo":939},{"AssetDatabase":4518295},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":36970},{"Upm":1788},{"UpmDiagnostics":8},{"AssetCompliance":96},{"DrivenProperties":72},{"HubClient":848},{"LocalIPC":209},{"ProfilerEditor":9738},{"CoreBusinessMetrics":3205},{"Windowing":416},{"Licensing":992},{"AssetReference":32},{"IPCStream":7003}]}
